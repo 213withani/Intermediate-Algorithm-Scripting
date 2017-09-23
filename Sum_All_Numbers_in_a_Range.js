@@ -1,9 +1,11 @@
 
 function sumAll(arr) {
+    var maxNum=Math.max.apply(null, arr);
+    var minNum=Math.min.apply(null, arr);
     var array=[];
-    var num=arr[0];
-    
-    for(var i=0;i<arr[1];i++){
+    var num=minNum;
+
+    for(var i=0;i<=maxNum-minNum;i++){
       
       array.push(num);
       num+=1;
@@ -17,5 +19,5 @@ function sumAll(arr) {
     
   }
   
-  sumAll([1, 4]);
+  sumAll([5, 10]);
   
