@@ -1,11 +1,21 @@
 
 function diffArray(arr1, arr2) {
     var newArr = [];
+    var smallArr=[];
+    var bigArr=[];
 
-    newArr= arr1.filter(function(param) {
+    if(arr1.length>arr2.length){
+        bigArr=arr1;
+        smallArr=arr2;
+    }else{
+        smallArr=arr1;
+        bigArr=arr2;
+    }
+    newArr= bigArr.filter(function(param) {
 		//console.log(arr2.indexOf(param));
-        return arr2.indexOf(param)<0;
+        return smallArr.indexOf(param)<0;
     });
+
 	return newArr;
   }
   
