@@ -1,6 +1,7 @@
 
 function diffArray(arr1, arr2) {
     var newArr = [];
+var newArr2 = [];
     var smallArr = [];
     var bigArr = [];
 
@@ -17,7 +18,12 @@ function diffArray(arr1, arr2) {
         return smallArr.indexOf(param) < 0;
     });
 
-    return newArr;
+newArr2 = smallArr.filter(function (param) {
+        // Check each bigArr element against the small array.
+        return bigArr.indexOf(param) < 0;
+    });
+
+    return newArr.concat(newArr2);
 }
 
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+diffArray([1, 2, 3, 4], [1, 2, 3, 5]);
