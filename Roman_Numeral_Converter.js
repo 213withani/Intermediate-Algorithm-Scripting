@@ -9,7 +9,7 @@ function convertToRoman(num) {
         500:"D",
         1000:"M"
     }
-    var numeralsArr=["I","II","III","IV","VIII","IX","X"];
+    var numeralsArr=["I","II","III","IV","V","VI","VII","VIII","IX","X"];
     return num;
    }
    
